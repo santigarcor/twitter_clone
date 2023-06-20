@@ -76,13 +76,13 @@ class TweetModel {
   factory TweetModel.fromMap(Map<String, dynamic> map) {
     return TweetModel(
       text: map['text'] as String,
-      hashTags: List<String>.from(map['hashTags'] as List<String>),
-      links: List<String>.from(map['links'] as List<String>),
-      imageLinks: List<String>.from(map['imageLinks'] as List<String>),
+      hashTags: List<String>.from(map['hashTags']),
+      links: List<String>.from(map['links']),
+      imageLinks: List<String>.from(map['imageLinks']),
       tweetType: TweetType.fromString(map['tweetType']),
       createdAt: DateTime.fromMillisecondsSinceEpoch(map['createdAt'] as int),
-      likes: List<String>.from(map['likes'] as List<String>),
-      commentIds: List<String>.from(map['commentIds'] as List<String>),
+      likes: List<String>.from(map['likes']),
+      commentIds: List<String>.from(map['commentIds']),
       id: map['\$id'] ?? '',
       uid: map['uid'] as String,
       shareCount: map['shareCount'] as int,

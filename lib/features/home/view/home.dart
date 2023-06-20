@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:twitter_clone/constants/constants.dart';
 import 'package:twitter_clone/features/tweet/view/create_tweet.dart';
+import 'package:twitter_clone/features/tweet/view/tweet_list.dart';
 import 'package:twitter_clone/theme/theme.dart';
 import 'package:twitter_clone/widgets/base_app_bar.dart';
 
@@ -42,7 +43,11 @@ class _HomeState extends State<Home> {
       appBar: BaseAppBar(),
       body: IndexedStack(
         index: _page,
-        children: [],
+        children: const [
+          TweetList(),
+          Text('Search'),
+          Text('notifications'),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: handleCreateTweetNavigation,
